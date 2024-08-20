@@ -4,7 +4,11 @@
 
 - 其实这个插件十分的简单，拆开也是可以当单js使用的，并且其中的很多都是~~借鉴~~，没有含金量，不建议使用
 
-- 直接下载zip并且解压缩即可，自动更新什么的还在学习，不断完善
+- 直接下载zip并且解压缩即可，也可以用下方git拉取，自动更新什么的还在学习，不断完善
+
+```
+git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSama-plugin/
+```
 
 ## 功能
 - 使用'ehelp'来得知所有功能
