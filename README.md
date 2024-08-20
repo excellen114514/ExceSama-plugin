@@ -11,13 +11,14 @@ git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSa
 ```
 
 ## 功能
-- 使用'ehelp'来得知所有功能
+- 使用'ehelp'来得知所有功能描述
 1. 发病XX
 2. 动漫图帮助
 3. 二次元图帮助
 4. 来点视频
 5. ~~comesss~~(没有上传源码 封闭测试)
 6. 祖安一句
+7. steam在线
 
 
 ## 友链
