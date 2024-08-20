@@ -37,13 +37,19 @@ export class excellen extends plugin {
         
         //ִ收到命令并执行
         let url = 'https://image.anosu.top/pixiv/json?r18=1';
-        let res = await fetch(url).catch((err) => logger.error(err));
-        let msg = [segment.at(e.user_id), segment.image(res.url)];
+        let res = await fetch(url).catch((err) => logger.error(err))
+        //判定接口是否可用
+        if (!res) {
+            logger.error('[setu] 接口请求失败')
+            return await this.reply('错误，请反馈！')
+        }
 
-        //回复
-        e.reply(msg);
+        res = await res.text()
+        //输出到控制台
+        logger.info(`[接口结果] setu：${res}`)
 
-        return true; //返回 true 阻挡消息不再往下
+        //返回结果 
+        await this.reply(`${res}`)
     }
 
     async Zuan(e) {
