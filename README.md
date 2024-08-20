@@ -17,9 +17,10 @@ git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSa
 3. 二次元图帮助
 4. 来点视频
 5. ~~comesss~~(没有上传源码 封闭测试)
+6. 祖安一句
 
 
-- 友链
+## 友链
 -  [Yunzai插件库](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)
 -  [Yunzai-bot](https://gitee.com/Le-niao/Yunzai-Bot)
        
