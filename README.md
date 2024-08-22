@@ -19,7 +19,7 @@ git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSa
 5. ~~comesss~~(没有上传源码 封闭测试)
 6. 祖安一句
 7. steam在线
-8. 天气xx
+8. 天气xx(仅能查询市的天气信息)
 9. 网页截图xx(仅支持http和https)
 
 
