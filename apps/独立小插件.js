@@ -1,9 +1,7 @@
 ﻿
  import fetch from "node-fetch";
- import fs from 'fs';
 
 const Setu = /^(#|\/)?涩图$/
-const Ehelp = /^(#|\/)?ehelp$/
 const Zuan = /^(#|\/)?祖安一句$/
 const Comess = /^(#|\/)?来点视频$/
 
@@ -17,9 +15,6 @@ export class excellen extends plugin {
             rule: [{
                     reg: Setu,
                     fnc: "Setu"
-                }, {
-                    reg: Ehelp,
-                    fnc: "Ehelp"
                 }, {
                     reg: Zuan,
                     fnc: "Zuan"
@@ -92,17 +87,7 @@ export class excellen extends plugin {
 
     }
 
-    async Ehelp(e) {
-        {
-            const path = process.cwd() + '/plugins/ExceSama-plugin/resources/help';//设立一个文件夹并从中提出图片
-            const files = fs.readdirSync(path);//调用fs模块
-            const imgFiles = files.filter(file => file.endsWith('.jpg') || file.endsWith('.png'));//可以再扩写其他格式
-            const randomIndex = Math.floor(Math.random() * imgFiles.length);
-            const imgPath = `${path}/${imgFiles[randomIndex]}`;
-            const img = fs.readFileSync(imgPath);
-             await this.reply(segment.image(img));//输出文件夹图片
-        }
-    }
+    
 
     
 
