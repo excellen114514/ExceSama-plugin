@@ -22,6 +22,10 @@ git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSa
 8. 天气xx(仅能查询市的天气信息)
 9. 网页截图xx(仅支持http和https)
 
+#### 未来要实现的功能（咕咕咕）
+1. 漂流瓶
+2. 随机一言
+3. and so on~
 
 ## 友链
 -  [Yunzai插件库](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)
