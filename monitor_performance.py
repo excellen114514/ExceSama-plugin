@@ -18,6 +18,6 @@ if __name__ == "__main__":
     for i in range(3):
         cpu_usage, ram_percent = get_performance()
         print(f"Iteration {i + 1}:")
-        print(f"CPU 占用率: {cpu_usage:.2f}%")
-        print(f"RAM 占用率: {ram_percent}%")
+        print(f"CPU usage: {cpu_usage:.2f}%")
+        print(f"RAM usage: {ram_percent}%")
         time.sleep(2)
