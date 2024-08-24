@@ -23,7 +23,7 @@ git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSa
 8. 天气xx(仅能查询市的天气信息，不保证全市都有)
 9. 网页截图xx(仅支持http和https)
 
-#### 未来要实现的功能（咕咕咕）
+- 未来要实现的功能（咕咕咕）
 1. 漂流瓶
 2. 随机一言
 3. and so on~
@@ -34,4 +34,6 @@ git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSa
 -  [遇见api](https://api.yujn.cn/)      
 
 
-本项目使用 [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/) 作为开源许可证。
+本项目使用 [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/) 作为开源许可证
+
+如果可以，请给项目一个免费的star～~~球球惹~~
