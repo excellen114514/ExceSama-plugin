@@ -10,7 +10,10 @@
 ```
 git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSama-plugin/
 ```
-
+- 另外，要使用cpu监听，得下载python3并安装psutil依赖库
+```
+pip install psutil
+```
 ## 功能
 - 使用'ehelp'来得知所有功能描述
 1. 发病XX
@@ -22,11 +25,13 @@ git clone https://github.com/excellen114514/ExceSama-plugin.git ./plugins/ExceSa
 7. steam在线
 8. 天气xx(仅能查询市的天气信息，不保证全市都有)
 9. 网页截图xx(仅支持http和https)
+10. cpu监听（很多管理插件都有，这个只是简单的py）
 
 - 未来要实现的功能（咕咕咕）
 1. 漂流瓶
 2. 随机一言
-3. and so on~
+3. 优化帮助的图片
+4. and so on~
 
 ## 友链
 -  [Yunzai插件库](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)
