@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 
 //输出载入消息
-logger.info('尝试载入e插件')
+logger.info('尝试载入ExceSama插件')
 
 
 
@@ -33,5 +33,5 @@ for (let i in files) {
 
 export { apps }
 
-logger.info(logger.yellow('E插件加载中'))
+logger.info(logger.yellow('ExceSama插件加载中'))
 logger.info(logger.yellow('完成！感谢支持！'))
