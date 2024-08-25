@@ -23,7 +23,7 @@ export class cpuli extends plugin {
         //ִ收到命令后执行
 
 // 定义 Python 程序的路径
-        const pythonScriptPath = path.join('./plugins/ExceSama-plugin/monitor_performance.py');
+        const pythonScriptPath = path.join('./plugins/ExceSama-plugin/py/monitor_performance.py');
 
 // 使用 spawn 方法运行 Python 程序
         const pythonProcess = spawn('python', [pythonScriptPath]);
