@@ -33,5 +33,5 @@ for (let i in files) {
 
 export { apps }
 
-logger.info(logger.yellow('ExceSama插件加载中'))
-logger.info(logger.yellow('完成！感谢支持！'))
+logger.info(logger.green('ExceSama插件加载中'))
+logger.info(logger.green('完成！感谢支持！'))
