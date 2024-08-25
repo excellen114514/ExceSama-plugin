@@ -1,6 +1,6 @@
 ## ExceSama-plugin
 
-- 一个适用于[Yunzai-bot](https://gitee.com/Le-niao/Yunzai-Bot)的随机图|发病|实用小功能的插件
+- 一个适用于[Yunzai-bot](https://gitee.com/Le-niao/Yunzai-Bot)的随机图|发病|游戏小功能的插件
 
 - 其实这个插件十分的简单，拆开也是可以当单js使用的，并且其中的很多都是~~借鉴~~，没有含金量，不建议使用
 
@@ -26,6 +26,7 @@ pip install psutil
 8. 天气xx(仅能查询市的天气信息，不保证全市都有)
 9. 网页截图xx(仅支持http和https)
 10. cpu监听（很多管理插件都有，这个只是简单的py）
+11. 来局轮盘赌（再改造，移除禁言惩罚）
 
 - 未来要实现的功能（咕咕咕）
 1. 漂流瓶
