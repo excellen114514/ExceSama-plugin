@@ -3,13 +3,13 @@ import plugin from '../../../lib/plugins/plugin.js'
 
 const RSRL = /^(#|\/)?来局轮盘赌$/
 const Shoot =/^(#|\/)?开枪$/
-const StopGame =/^(#|\/)?结束游戏$/
+const StopGame =/^(#|\/)?结束轮盘赌$/
 const  NowBullet =/^(#|\/)?查看子弹$/
 
 export class roulette extends plugin {
   constructor() {
     super({
-      name: '俄罗斯轮盘',
+      name: '轮盘赌',
       dsc: '俄罗斯轮盘',
       event: 'message',
       priority: 6,
@@ -44,8 +44,8 @@ export class roulette extends plugin {
       e.reply('当前群轮盘赌正在进行中！\n请发送 开枪 参与轮盘赌')
       return
     }
-    // 随机生成数组，长度从3到8，其中一项为子弹，剩下的为空(0为空，1为子弹)
-    let length = Math.floor(Math.random() * 6) + 3
+    // 随机生成数组，长度从3到10，其中一项为子弹，剩下的为空(0为空，1为子弹)
+    let length = Math.floor(Math.random() * 6) + 5
     let GameData = new Array(length).fill(0)
     // 随机指定数组的某一项为子弹，剩下的为空
     let target = Math.floor(Math.random() * length)
@@ -62,16 +62,12 @@ export class roulette extends plugin {
     }
     let username = e.sender.nickname
     let groupId = e.group_id
-    if (await redis.exists(`Exce:ELS2:${groupId}`) === 0) {
-      await this.StartGame(e)
-    }
     let GameData = JSON.parse(await redis.get(`Exce:ELS2:${groupId}`))
-    // 处理一下高并发问题
     if (GameData === null) {
-      await redis.del(`Exce:ELS2:${groupId}`)
-      await this.StartGame(e)
-      return
+      e.reply('游戏尚未开始哦~发送 来局轮盘赌 来开始游戏吧')
+      return false
     }
+    // 处理一下高并发问题
     if (GameData[0] === 0) {
       GameData.shift()
 
@@ -87,7 +83,7 @@ export class roulette extends plugin {
       return
     }
     if (GameData[0] === 1) {
-      e.reply(`【${username}】开了一枪，砰！枪响了。\n本局轮盘赌结束！发送 开枪 开启新一局轮盘赌`)
+      e.reply(`【${username}】开了一枪，砰！枪响了。\n本局的输家是${username}哦！嘻嘻，记得接受惩罚~\n本局轮盘赌结束！发送 来局轮盘赌 开启新一局轮盘赌`)
       await redis.del(`Exce:ELS2:${groupId}`)
     }
   }
