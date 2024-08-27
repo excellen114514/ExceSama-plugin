@@ -44,7 +44,7 @@ export class roulette extends plugin {
       e.reply('当前群轮盘赌正在进行中！\n请发送 开枪 参与轮盘赌')
       return
     }
-    // 随机生成数组，长度从3到10，其中一项为子弹，剩下的为空(0为空，1为子弹)
+    // 随机生成数组，长度从5到10，其中一项为子弹，剩下的为空(0为空，1为子弹)
     let length = Math.floor(Math.random() * 6) + 5
     let GameData = new Array(length).fill(0)
     // 随机指定数组的某一项为子弹，剩下的为空
