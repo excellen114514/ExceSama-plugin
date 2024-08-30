@@ -83,7 +83,10 @@ export class roulette extends plugin {
       return
     }
     if (GameData[0] === 1) {
-      e.reply(`【${username}】开了一枪，砰！枪响了。\n本局的输家是${username}哦！嘻嘻，记得接受惩罚~\n本局轮盘赌结束！发送 来局轮盘赌 开启新一局轮盘赌`)
+      /**禁言惩罚代码：let time = Math.floor(Math.random() * 240) + 60
+      await e.group.muteMember(e.sender.user_id, time) */
+      //在ereply添加time引用回复:恭喜【${username}】被禁言${time}秒
+      e.reply(`【${username}】开了一枪，砰！枪响了。\n本局的输家是【${username}】哦，嘻嘻！\n本局轮盘赌结束！发送 来局轮盘赌 开启新一局轮盘赌`)
       await redis.del(`Exce:ELS2:${groupId}`)
     }
   }
