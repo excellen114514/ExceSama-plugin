@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path'; 
 import Yaml from 'yaml';
 
-export const PLUGIN_PATH = path.join(path.resolve(), 'plugins', 'KnockMuYu-plugin');
+export const PLUGIN_PATH = path.join(path.resolve(), 'plugins', 'ExceSama-plugin');
 
 const FILE_PATH = {
     player: path.join(PLUGIN_PATH, 'data', 'player'),
