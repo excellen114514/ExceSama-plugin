@@ -50,5 +50,5 @@ export function convertSecToMinAndSec(seconds) {
 
 /** 当前日期 */
 export function getCurrentDate() {
-    return new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Beijing' })
+    return new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
 }
