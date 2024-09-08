@@ -7,6 +7,7 @@ logger.info('尝试载入ExceSama插件')
 
 
 //注册插件
+fs.mkdirSync('plugins/ExceSama-plugin/data/player', { recursive: true })
 const files = fs.readdirSync('./plugins/ExceSama-plugin/apps').filter(file => file.endsWith('.js'))
 
 let ret = []
