@@ -38,7 +38,7 @@ export class Kc extends plugin {
             lv: 0,
             xp: 0,
             number: 0,
-            cd: { buy: 0},
+            cd: { knock: 0},
             log: { knock: []}
         })
     }
