@@ -28,7 +28,7 @@ npm install puppeteer
 6. 祖安一句
 7. steam在线
 8. 天气xx(仅能查询市的天气信息，不保证全市都有)
-9. 网页截图xx(http协议头修复中，暂时不能带协议头)
+9. 网页截图(示例：excesama.fun,https://excesama.fun)
 10. cpu监听（很多管理插件都有，这个只是简单的py）
 11. 来局轮盘赌（再改造，移除禁言惩罚）
 
