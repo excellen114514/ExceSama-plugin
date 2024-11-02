@@ -4,7 +4,7 @@ import path from 'path';
 import puppeteer from 'puppeteer';
 import { segment } from "oicq";
 import crypto from 'crypto';
-const Jietu = /(.*).(.*)/
+const Jietu = /网页截图(.*)/
 const Httpjietu =/http(.*)/
 export class excellen extends plugin {
   constructor() {
@@ -33,6 +33,7 @@ export class excellen extends plugin {
     for (let m of e.message) {
       tup += m.text;
      }
+     tup = tup.replace(/#|网页截图/g, "").trim();
      console.log(tup);
     const currentWorkingDirectory = process.cwd();
     const uniqueId = generateUniqueId(`${tup}`);
