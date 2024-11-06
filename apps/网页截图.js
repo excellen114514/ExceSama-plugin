@@ -64,10 +64,14 @@ async function takeScreenshot(url, outputPath) {
   await page.setViewport({ width: 1920, height: 1080 });
 
   // 确定网站的协议
-  const protocol = await determineProtocol(url);
-  const fullUrl = `${protocol}${url}`;
+  
 
-  // 导航到指定网址
+  const fullUrl = `https:${url}`;
+  let res = await fetch(fullUrl).catch((err) => logger.error(err));
+  if (!res) {
+    logger.error(`${url}使用https失败，转http`)
+    const fullUrl = `http:${url}`;
+     // 导航到指定网址
   await page.goto(fullUrl, { waitUntil: 'networkidle0' });
 
   // 截取网页的全屏
@@ -78,6 +82,20 @@ async function takeScreenshot(url, outputPath) {
 
   // 关闭浏览器
   await browser.close();
+  }else{
+    // 导航到指定网址
+  await page.goto(fullUrl, { waitUntil: 'networkidle0' });
+
+  // 截取网页的全屏
+  const screenshotBuffer = await page.screenshot({ fullPage: true });
+
+  // 将截图保存为图片文件
+  await fsp.writeFile(outputPath, screenshotBuffer, 'base64');
+
+  // 关闭浏览器
+  await browser.close();   
+  }
+  
   const imagePath = `${outputPath}`;
   const img = fs.readFileSync(imagePath);
   return img;
@@ -109,26 +127,6 @@ async function takeScreenshotwithhttp(url, outputPath) {
   const img = fs.readFileSync(imagePath);
   return img;
 }
-
-async function determineProtocol(url) {
-  try {
-    // 尝试使用fetch API获取网站的响应头
-    const response = await fetch(url, { method: 'HEAD' });
-    const location = response.headers.get('Location');
-
-    // 如果Location头存在且以'https'开头，则返回'https://'作为协议
-    if (location && location.startsWith('https://')) {
-      return 'https://';
-    } else {
-      // 否则，默认使用HTTP
-      return 'http://';
-    }
-  } catch (error) {
-    // 如果fetch请求失败，假设是HTTP
-    return 'http://';
-  }
-}
-
 function generateUniqueId(url) {
   // 创建一个 sha256 哈希对象
   const hash = crypto.createHash('sha256');
