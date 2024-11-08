@@ -4,8 +4,8 @@ import path from 'path';
 import puppeteer from 'puppeteer';
 import { segment } from "oicq";
 import crypto from 'crypto';
-const Jietu = /网页截图(.*)/
-const Httpjietu =/http(.*)/
+const Jietu = /^(#|\/)?网页截图(.*)$/
+const Httpjietu =/^(#|\/)?http(.*)$/
 export class excellen extends plugin {
   constructor() {
       super({
@@ -57,7 +57,9 @@ export class excellen extends plugin {
 }
 async function takeScreenshot(url, outputPath) {
   // 启动浏览器并打开一个新页面
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox']
+});
   const page = await browser.newPage();
 
   // 设置视口大小（可以根据需要调整）
@@ -103,7 +105,9 @@ async function takeScreenshot(url, outputPath) {
 
 async function takeScreenshotwithhttp(url, outputPath) {
   // 启动浏览器并打开一个新页面
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox']
+});
   const page = await browser.newPage();
 
   // 设置视口大小（可以根据需要调整）
