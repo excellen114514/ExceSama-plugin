@@ -16,7 +16,7 @@ pip install psutil
 ```
 - 要使用网页截图，请打依赖puppeteer(用的不是yunzai的puppeteer.js)
 ```
-npm install puppeteer
+npm install 
 ```
 ## 功能
 - 使用'ehelp'来得知所有功能描述
